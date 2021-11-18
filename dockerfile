@@ -5,7 +5,7 @@ COPY index.js ./
 COPY file.html ./
 RUN apt-get update  \
 	&& curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -  \
-	&& sudo apt-get install -y  \
+	&& apt-get install -y  \
 # Base Packages
 	nodejs tzdata software-properties-common apt-transport-https wget git curl vim nano zip sudo net-tools xvfb php supervisor gnupg \
 # C, C++
