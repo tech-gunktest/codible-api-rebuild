@@ -42,7 +42,7 @@ RUN apt-get update  \
 	&& bash -c 'echo "Go Installed!"'  \
 # rust
 	&& curl https://sh.rustup.rs -sSf | sh -s -- -y  \
-	&& sudo chmod -R a+w $RUSTUP_HOME $CARGO_HOME \
+	&& chmod -R a+w $RUSTUP_HOME $CARGO_HOME \
 	&& cargo --version \
 # Nodejs(LTS Release)
 	&& bash -c 'echo "Installing Nodejs..."'  \
