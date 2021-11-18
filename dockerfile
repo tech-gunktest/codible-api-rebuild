@@ -40,8 +40,6 @@ RUN apt-get update  \
 	&& bash -c 'echo "Go Installed!"'  \
 # rust
 	&& curl https://sh.rustup.rs -sSf | sh -s -- -y  \
-	&& chmod -R a+w $RUSTUP_HOME $CARGO_HOME \
-	&& cargo --version \
 # PowerShell
 	&& wget -q https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -P /tmp  \
 	&& apt install -y  /tmp/packages-microsoft-prod.deb  \
