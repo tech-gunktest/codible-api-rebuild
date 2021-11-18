@@ -32,8 +32,6 @@ RUN apt-get update  \
 # Scala
 	&& wget https://www.scala-lang.org/files/archive/scala-2.13.6.deb -P /tmp  \
 	&& apt install -y /tmp/scala-2.13.6.deb  \
-# Yarn
-	&& npm install --global yarn  \
 # Go
 	&& bash -c 'echo "Installing Go..."'  \
 	&& wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz -P /tmp  \
@@ -44,12 +42,6 @@ RUN apt-get update  \
 	&& curl https://sh.rustup.rs -sSf | sh -s -- -y  \
 	&& chmod -R a+w $RUSTUP_HOME $CARGO_HOME \
 	&& cargo --version \
-# Nodejs(LTS Release)
-	&& bash -c 'echo "Installing Nodejs..."'  \
-	&& wget https://nodejs.org/dist/v14.17.0/node-v14.17.0-linux-x64.tar.xz -P /tmp  \
-	&& tar -xvf /tmp/node-v14.17.0-linux-x64.tar.xz -C /tmp > /dev/null 2>&1  \
-	&& cp -r /tmp/node-v14.17.0-linux-x64/* /usr \
-	&& bash -c 'echo "Installed Nodejs!"' \
 # PowerShell
 	&& wget -q https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -P /tmp  \
 	&& apt install -y  /tmp/packages-microsoft-prod.deb  \
