@@ -4,9 +4,10 @@ COPY package*.json ./
 COPY index.js ./
 COPY file.html ./
 RUN apt-get update  \
-	&& apt-get install -y \
+	&& curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -  \
+	&& sudo apt-get install -y  \
 # Base Packages
-	tzdata software-properties-common apt-transport-https wget git curl vim nano zip sudo net-tools xvfb php npm supervisor gnupg \
+	nodejs tzdata software-properties-common apt-transport-https wget git curl vim nano zip sudo net-tools xvfb php supervisor gnupg \
 # C, C++
 	build-essential \
 # C-Sharp
