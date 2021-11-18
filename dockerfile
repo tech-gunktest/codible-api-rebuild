@@ -50,7 +50,7 @@ RUN apt-get update  \
 	&& wget https://swift.org/builds/swift-5.4.1-release/ubuntu2004/swift-5.4.1-RELEASE/swift-5.4.1-RELEASE-ubuntu20.04.tar.gz -P /tmp  \
 	&& tar -zxvf /tmp/swift-5.4.1-RELEASE-ubuntu20.04.tar.gz -C /tmp > /dev/null 2>&1  \
 	&& cp -r /tmp/swift-5.4.1-RELEASE-ubuntu20.04/usr/* /usr  \
-	&& bash -c 'echo "Swift Installed!"'  \
+	&& bash -c 'echo "Swift Installed!"'
 RUN npm install --only=production
 EXPOSE $PORT
 CMD [ "node", "index.js" ]
