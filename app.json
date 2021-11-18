@@ -1,0 +1,8 @@
+{
+    "name": "Codible",
+    "description": "test",
+    "repository": "https://github.com/vital987/code-server.git",
+    "logo": "https://avatars.githubusercontent.com/u/88415018?s=40&v=4",
+    "keywords": ["docker"],
+    "stack": "container"
+  }
